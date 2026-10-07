@@ -1,0 +1,9 @@
+> summary(reviews[, c("price_usd","discount_pct","delivery_days","reviewer_age","star_rating","sentiment_score")])
+   price_usd        discount_pct  delivery_days    reviewer_age   star_rating   sentiment_score 
+ Min.   :   0.37   Min.   : 0.0   Min.   : 1.00   Min.   :18.0   Min.   :1.00   Min.   :-1.000  
+ 1st Qu.:  20.00   1st Qu.: 0.0   1st Qu.: 4.00   1st Qu.:27.0   1st Qu.:2.00   1st Qu.:-0.448  
+ Median :  36.89   Median :19.0   Median : 5.00   Median :34.0   Median :3.00   Median : 0.198  
+ Mean   :  55.26   Mean   :24.2   Mean   : 5.01   Mean   :34.5   Mean   :3.21   Mean   : 0.118  
+ 3rd Qu.:  67.85   3rd Qu.:45.0   3rd Qu.: 6.00   3rd Qu.:42.0   3rd Qu.:4.00   3rd Qu.: 0.709  
+ Max.   :2055.89   Max.   :70.0   Max.   :20.00   Max.   :75.0   Max.   :5.00   Max.   : 1.000  
+                                  NAs    :750     NAs    :1000                                  

@@ -1,0 +1,11 @@
+> rf_pred <- predict(rf_model, newdata = test)
+> rf_cm   <- confusionMatrix(rf_pred, test$sentiment_label)
+> rf_cm$table
+          Reference
+Prediction Negative Neutral Positive
+  Negative     2096     502       35
+  Neutral       356     880      354
+  Positive       48     616     5111
+> round(rf_cm$overall[c("Accuracy","Kappa")], 4)
+Accuracy    Kappa 
+  0.8089   0.6731 

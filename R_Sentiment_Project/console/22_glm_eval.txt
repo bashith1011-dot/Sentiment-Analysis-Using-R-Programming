@@ -1,0 +1,11 @@
+> glm_prob <- predict(glm_model, newdata = test, type = "response")
+> glm_pred <- factor(ifelse(glm_prob > 0.5, "Positive", "Not_Positive"), levels = c("Not_Positive","Positive"))
+> glm_cm   <- confusionMatrix(glm_pred, test$is_positive, positive = "Positive")
+> glm_cm$table
+              Reference
+Prediction     Not_Positive Positive
+  Not_Positive         3939      463
+  Positive              559     5037
+> glm_auc  <- as.numeric(auc(roc(test$is_positive, glm_prob, quiet = TRUE)))
+> cat("Accuracy:", round(glm_cm$overall["Accuracy"], 4), "| AUC:", round(glm_auc, 4), "\n")
+Accuracy: 0.8978 | AUC: 0.9658 

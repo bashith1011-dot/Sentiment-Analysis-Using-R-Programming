@@ -1,0 +1,17 @@
+> set.seed(42)
+> rf_model <- randomForest(sentiment_label ~ ., data = train[, c(features, "sentiment_label")],
++                          ntree = 100, mtry = 6, nodesize = 5, importance = TRUE)
+> print(rf_model)
+
+Call:
+ randomForest(formula = sentiment_label ~ ., data = train[, c(features,      "sentiment_label")], ntree = 100, mtry = 6, nodesize = 5,      importance = TRUE) 
+               Type of random forest: classification
+                     Number of trees: 100
+No. of variables tried at each split: 6
+
+        OOB estimate of  error rate: 19.79%
+Confusion matrix:
+         Negative Neutral Positive class.error
+Negative     8399    1367      238    0.160436
+Neutral      2258    3334     2403    0.582989
+Positive      208    1443    20352    0.075035

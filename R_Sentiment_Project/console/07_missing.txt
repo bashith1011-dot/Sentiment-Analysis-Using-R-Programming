@@ -1,0 +1,4 @@
+> na_summary <- colSums(is.na(reviews))
+> na_summary[na_summary > 0]
+        delivery_days          reviewer_age reviewer_review_count 
+                  750                  1000                   500 

@@ -1,0 +1,8 @@
+> q1 <- quantile(reviews$price_usd, 0.25); q3 <- quantile(reviews$price_usd, 0.75)
+> iqr_out <- sum(reviews$price_usd > q3 + 1.5 * (q3 - q1))
+> cat("Price outliers (IQR rule):", iqr_out, "\n")
+Price outliers (IQR rule): 3490 
+> cap <- quantile(reviews$price_usd, 0.99)
+> reviews$price_usd <- pmin(reviews$price_usd, cap)
+> cat("Price capped at 99th percentile:", round(cap, 2), "\n")
+Price capped at 99th percentile: 299.4 

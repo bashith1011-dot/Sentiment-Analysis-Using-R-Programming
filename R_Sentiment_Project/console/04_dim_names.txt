@@ -1,0 +1,9 @@
+> dim(reviews)
+[1] 50000    23
+> names(reviews)
+ [1] "review_id"             "review_text"           "product_category"      "brand"                
+ [5] "price_usd"             "discount_pct"          "delivery_days"         "verified_purchase"    
+ [9] "has_image"             "reviewer_age"          "reviewer_review_count" "device_type"          
+[13] "region"                "review_date"           "review_year"           "review_month"         
+[17] "is_weekend"            "star_rating"           "return_flag"           "helpful_votes"        
+[21] "total_votes"           "sentiment_score"       "sentiment_label"      

@@ -1,0 +1,16 @@
+> reviews <- read.csv("data/product_reviews_50k.csv", stringsAsFactors = FALSE)
+> head(reviews[, c(1, 3:9, 22, 23)], 6)
+  review_id product_category   brand price_usd discount_pct delivery_days verified_purchase has_image
+1   R000001          Fashion Brand_S     28.75            0             5                 1         0
+2   R000002            Books Brand_N      5.73           28             5                 1         0
+3   R000003     Home_Kitchen Brand_Q     18.19            0             5                 1         0
+4   R000004     Home_Kitchen Brand_P    146.44            0             3                 0         0
+5   R000005      Electronics Brand_L     13.61            0             3                 1         0
+6   R000006      Electronics Brand_A     23.35           56             3                 1         0
+  sentiment_score sentiment_label
+1         -0.7646        Negative
+2         -0.2774         Neutral
+3         -0.8209        Negative
+4          0.6783        Positive
+5         -0.9106        Negative
+6          0.9814        Positive

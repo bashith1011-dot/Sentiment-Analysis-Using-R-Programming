@@ -1,0 +1,5 @@
+> dup_count <- sum(duplicated(reviews))
+> cat("Duplicate rows:", dup_count, "\n")
+Duplicate rows: 0 
+> cat("Duplicate review IDs:", sum(duplicated(reviews$review_id)), "\n")
+Duplicate review IDs: 0 

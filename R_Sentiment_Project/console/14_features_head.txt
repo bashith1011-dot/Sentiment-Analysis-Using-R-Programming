@@ -1,0 +1,15 @@
+> head(reviews[, c("word_count","char_count","exclamation_count","pos_word_count","neg_word_count","negation_count","pos_ratio","neg_ratio")], 6)
+  word_count char_count exclamation_count pos_word_count neg_word_count negation_count pos_ratio
+1         19        113                 1              0              4              0    0.0000
+2         14         73                 1              0              2              0    0.0000
+3         15         92                 1              0              3              0    0.0000
+4         11         68                 2              2              0              0    0.1818
+5         10         61                 0              0              2              0    0.0000
+6         17        105                 2              3              0              0    0.1765
+  neg_ratio
+1    0.2105
+2    0.1429
+3    0.2000
+4    0.0000
+5    0.2000
+6    0.0000

@@ -1,0 +1,4 @@
+"Model","Type","Metric","MetricName","RMSE","AUC_or_MAE","F1"
+"Linear Regression","Regression (score)",0.8218,"R-squared",0.265,0.2092,NA
+"Random Forest","Classification (3-class)",0.8089,"Accuracy",NA,NA,0.7379
+"Logistic Regression","Classification (binary)",0.8978,"Accuracy",NA,0.9658,0.9079

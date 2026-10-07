@@ -1,0 +1,17 @@
+> lm_model <- lm(sentiment_score ~ ., data = train[, c(features, "sentiment_score")])
+> lm_sum   <- summary(lm_model)
+> cat("Multiple R-squared (train):", round(lm_sum$r.squared, 4), "\n")
+Multiple R-squared (train): 0.8178 
+> cat("Predictors used:", length(coef(lm_model)) - 1, "\n")
+Predictors used: 61 
+> top <- coef(lm_sum)[order(-abs(coef(lm_sum)[, "t value"])), ]
+> round(top[2:9, ], 4)
+               Estimate Std. Error t value Pr(>|t|)
+brandBrand_O    -0.2733     0.0087 -31.389        0
+brandBrand_F    -0.2746     0.0088 -31.324        0
+return_flag     -0.1417     0.0046 -30.755        0
+delivery_days   -0.0211     0.0007 -30.436        0
+discount_pct     0.0023     0.0001  27.371        0
+brandBrand_B    -0.1556     0.0088 -17.779        0
+negation_count  -0.0436     0.0028 -15.568        0
+brandBrand_H    -0.1291     0.0086 -14.976        0

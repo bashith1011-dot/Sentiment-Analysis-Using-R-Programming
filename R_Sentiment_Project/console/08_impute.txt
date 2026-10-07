@@ -1,0 +1,5 @@
+> for (col in c("reviewer_age", "delivery_days", "reviewer_review_count")) {
++   reviews[[col]][is.na(reviews[[col]])] <- median(reviews[[col]], na.rm = TRUE)
++ }
+> cat("Missing values after median imputation:", sum(is.na(reviews)), "\n")
+Missing values after median imputation: 0 

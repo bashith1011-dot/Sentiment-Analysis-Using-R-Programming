@@ -1,0 +1,13 @@
+> num_vars <- reviews[, sapply(reviews, is.numeric)]
+> cor_mat  <- cor(num_vars, use = "pairwise.complete.obs")
+> dim(cor_mat)
+[1] 15 15
+> round(sort(cor_mat[, "sentiment_score"], decreasing = TRUE), 3)
+      sentiment_score           star_rating          discount_pct         helpful_votes 
+                1.000                 0.839                 0.279                 0.022 
+          total_votes reviewer_review_count     verified_purchase            is_weekend 
+                0.019                 0.006                 0.003                 0.002 
+         review_month          reviewer_age           review_year             has_image 
+                0.000                 0.000                -0.002                -0.007 
+            price_usd         delivery_days           return_flag 
+               -0.082                -0.227                -0.335 

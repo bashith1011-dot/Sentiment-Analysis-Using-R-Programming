@@ -1,0 +1,11 @@
+> reviews$review_date     <- as.Date(reviews$review_date)
+> reviews$sentiment_label <- factor(reviews$sentiment_label, levels = c("Negative","Neutral","Positive"))
+> for (f in c("product_category","brand","device_type","region")) reviews[[f]] <- factor(reviews[[f]])
+> table(reviews$sentiment_label)
+
+Negative  Neutral Positive 
+   12504     9993    27503 
+> round(prop.table(table(reviews$sentiment_label)) * 100, 1)
+
+Negative  Neutral Positive 
+      25       20       55 

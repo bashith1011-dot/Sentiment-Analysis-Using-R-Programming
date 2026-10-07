@@ -1,0 +1,15 @@
+> train$is_positive <- factor(ifelse(train$sentiment_label == "Positive", "Positive", "Not_Positive"), levels = c("Not_Positive","Positive"))
+> test$is_positive  <- factor(ifelse(test$sentiment_label  == "Positive", "Positive", "Not_Positive"), levels = c("Not_Positive","Positive"))
+> glm_model <- glm(is_positive ~ ., data = train[, c(features, "is_positive")], family = binomial)
+> cat("AIC:", round(AIC(glm_model), 1), "\n")
+AIC: 18829 
+> round(head(coef(summary(glm_model))[order(-abs(coef(summary(glm_model))[, "z value"])), ], 8), 4)
+                  Estimate Std. Error  z value Pr(>|z|)
+star_rating         1.6183     0.0225  71.7766        0
+return_flag        -1.1739     0.0775 -15.1480        0
+delivery_days      -0.1274     0.0098 -13.0119        0
+discount_pct        0.0151     0.0012  12.7764        0
+brandBrand_O       -1.5749     0.1334 -11.8066        0
+brandBrand_F       -1.4717     0.1361 -10.8108        0
+exclamation_count   0.2291     0.0238   9.6398        0
+brandBrand_B       -0.8447     0.1213  -6.9660        0

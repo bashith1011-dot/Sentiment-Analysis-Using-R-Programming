@@ -1,0 +1,6 @@
+> set.seed(123)
+> trainIndex <- createDataPartition(reviews$sentiment_label, p = 0.8, list = FALSE)
+> train <- reviews[trainIndex, ]
+> test  <- reviews[-trainIndex, ]
+> cat("Train rows:", nrow(train), "| Test rows:", nrow(test), "\n")
+Train rows: 40002 | Test rows: 9998 

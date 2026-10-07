@@ -1,0 +1,11 @@
+> length(features)
+[1] 32
+> features
+ [1] "product_category"      "brand"                 "price_usd"             "discount_pct"         
+ [5] "delivery_days"         "verified_purchase"     "has_image"             "reviewer_age"         
+ [9] "reviewer_review_count" "device_type"           "region"                "review_year"          
+[13] "review_month"          "is_weekend"            "star_rating"           "return_flag"          
+[17] "helpful_votes"         "total_votes"           "word_count"            "char_count"           
+[21] "avg_word_length"       "sentence_count"        "exclamation_count"     "question_count"       
+[25] "uppercase_word_count"  "pos_word_count"        "neg_word_count"        "negation_count"       
+[29] "pos_ratio"             "neg_ratio"             "net_price"             "helpful_ratio"        

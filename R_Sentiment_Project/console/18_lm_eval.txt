@@ -1,0 +1,5 @@
+> lm_pred  <- predict(lm_model, newdata = test)
+> lm_res   <- postResample(lm_pred, test$sentiment_score)
+> round(lm_res, 4)
+    RMSE Rsquared      MAE 
+  0.2650   0.8218   0.2092 
